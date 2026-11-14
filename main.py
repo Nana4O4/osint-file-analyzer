@@ -5,7 +5,9 @@ import hashlib
 from PIL import Image
 from PIL import UnidentifiedImageError
 
-photo = Path("samples/sample.jpg")
+BASE_DIR = Path(__file__).resolve().parent
+photo = BASE_DIR / "samples" / "sample.jpg"
+
 
 if photo.is_file():
     print("file found")
